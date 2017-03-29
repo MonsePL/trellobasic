@@ -1,12 +1,10 @@
 alert("miau")
 
-
 function Cosaporhacer(cosa){
   this.cosa = cosa;
-
 }
-//se crea un array vacio para poner las cosas que vamos a hacer//
 
+//se crea un array vacio para poner las cosas que vamos a hacer//
 var muchascosas= []
 
 function crearlista(){
@@ -27,15 +25,12 @@ function mostrarlista(){
   var lista = document.createElement ("ul")
   listacosasp.removeChild(listacosasp.firstChild);
 
-
-
-
   //se recorre el array para crear un elemento li en base de la clase y como se crean los obj//
   muchascosas.forEach(function(cosaporhacer){
-    var elemento = document.createElement("li")
+  var elemento = document.createElement("li")
 
-    elemento.innerText = cosaporhacer.cosa
-    lista.appendChild(elemento)
+  elemento.innerText = cosaporhacer.cosa
+  lista.appendChild(elemento)
   })
   listacosasp.appendChild(lista)
 }
@@ -45,7 +40,6 @@ function mostrarlista(){
 //Esto va a ser para las cosas a futuro por eso le puse f :P//
 function Cosaporhacerf(cosaf){
   this.cosaf = cosaf;
-
 }
 //se crea un array vacio para poner las cosas que vamos a hacer//
 
@@ -68,17 +62,55 @@ function mostrarlistaf(){
   //se crea un nuevo elemento de lista//
   var lista = document.createElement ("ul")
 
-  //se supone que este elimina los duplicados pero no funciona :( //
   listacosasp.removeChild(listacosasp.firstChild);
-
 
 
   //se recorre el array para crear un elemento li en base de la clase y como se crean los obj//
   muchascosasf.forEach(function(cosaporhacerf){
-    var elemento = document.createElement("li")
+  var elemento = document.createElement("li")
 
-    elemento.innerText = cosaporhacerf.cosaf
-    lista.appendChild(elemento)
+  elemento.innerText = cosaporhacerf.cosaf
+  lista.appendChild(elemento)
+  })
+  listacosasp.appendChild(lista)
+}
+
+
+
+
+//Aqui voy a hacer una nueva lista//
+function Bloque(){
+  This.nombre = nombre;
+  this.tareas = tareas;
+
+}
+//se crea un array vacio para poner las cosas que vamos a hacer//
+
+var bloquenuevastareas= []
+
+function crearbloque(){
+  //la variable listita será igual al valor intro de la primera cajita//
+  var listita = document.getElementById("agregarlista")
+  // se crea un nuevo objeto llamado cosanueva en base a la clase cosa por hacer//
+  var nuevobloque = new Bloque(listita.value)
+  //se agrega la cosa nueva al array vacio//
+  bloquenuevastareas.push(nuevobloque)
+  mostrarbloque()
+}
+
+
+function mostrarbloque(){
+  //se identifica el lugar (bloque) donde se va a imprimir//
+  var listacosasp = document.getElementById("segmento")
+  //se crea un nuevo elemento del bloque //
+  var lista = document.createElement ("tr")
+
+  //se recorre el array para crear un elemento td en base de la clase y como se crean los obj//
+  bloquenuevastareas.forEach(function(bloque){
+    var elemento = document.createElement("td")
+
+  elemento.innerText = bloque.nombre.tareas
+  lista.appendChild(elemento)
   })
   listacosasp.appendChild(lista)
 }
