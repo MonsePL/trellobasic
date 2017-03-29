@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <h1 ><font color="#ce47d6"; size="7"; face=helevetica >Trello</h1>
+    <h1 > <font color="#ce47d6"; size="30"; face=helevetica>Trello</h1>
 
 
 
@@ -15,30 +15,30 @@
       <table  width="1000" border="5" bordercolor="pink"  ALIGN=left >
         <tr>
           <td><ul>
-           <li><font color="#8731d2"; size="5"; face=helevetica >Pendientes de otra semana</li>
-              <ul id= "listaPresente">
+           <li><font color="#8731d2"; size="5"; face=helevetica id= "listaPresente">Pendientes de otra semana</li>
+              <ul>
                 <li>Terminar exámen</li>
                 <li>Comer sushi</li>
               </ul>
            </ul>
            <label>Agregar pendiente </label>
-            <input type="text"  value="" placeholder="miau">
-            <input type="button" onclick="" value="Agregar">
+            <input type="text"   placeholder="miau"  id ="agregarpendpresente">
+            <input type="button" onclick="crearlista()" value="Agregar">
            </td>
           </tr>
 
 
           <tr>
             <td><ul>
-             <li><font color="#8731d2"; size="5"; face=helevetica >Pendientes de otra semana</li>
-                <ul id="listafuturo">
+             <li><font color="#8731d2"; size="5"; face=helevetica id="listafuturo">Pendientes de otra semana</li>
+                <ul>
                   <li>Terminar comida</li>
                   <li>Ordenar Sushi</li>
                 </ul>
              </ul>
              <label>Agregar pendiente </label>
-              <input type="text"  value="" placeholder="miau">
-              <input type="button" onclick="" value="Agregar">
+              <input type="text"   placeholder="miau"  id ="agregarpendfuturo">
+              <input type="button" onclick="crearlistaf()" value="Agregar">
              </td>
             </tr>
 
